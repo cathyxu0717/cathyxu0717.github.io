@@ -1,0 +1,103 @@
+body{
+	padding: 0px;
+	margin: 0px;
+	color: #254e7b;
+}
+/*Header Styling Starts from here*/
+header{
+	margin-bottom: 10px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	border-bottom: 2px solid #254e7b;
+	position: fixed;
+	width: 100%;
+	top: 0px;
+	overflow: hidden;
+	background-color: #85c1e5;
+	color: #254e7b;
+}
+h1{
+	display: inline-block;
+	margin: 0px;
+	margin-left: 5%;
+}
+/*Navigation Coding starts from here*/
+nav{
+	/*border: 2px solid black;*/
+	width: 17%;
+	padding: 10px;
+	float: right;
+	margin-right: 8%;
+	display: inline-block;
+}
+nav a{
+	padding: 5px;
+	text-decoration: none;
+	color: #254e7b;
+}
+nav a:hover{
+	color:white;
+}
+nav .active{
+	background-color: #254e7b;
+	color: white;
+}
+/*Navigation coding Ends here*/
+/*Header Styling Ends here*/
+/*Container Styling Starts from here*/
+#container{
+	width: 80%;
+	margin: auto;
+	margin-top: 100px;
+}
+#intro, #skills, footer{
+	text-align: center;
+}
+#intro p{
+	text-align: justify;
+}
+.hr-style{
+	width: 80%;
+	border: 0; 
+  	height: 1px; 
+  	background-image: -webkit-linear-gradient(left, #f0f0f0, #254e7b, #f0f0f0);
+  	background-image: -moz-linear-gradient(left, #f0f0f0, #254e7b, #f0f0f0);
+  	background-image: -ms-linear-gradient(left, #f0f0f0, #254e7b, #f0f0f0);
+  	background-image: -o-linear-gradient(left, #f0f0f0, #254e7b, #f0f0f0);
+	margin-bottom: 20px;
+}
+.images img{
+	width: 15%;
+	height: 15%;
+	padding: 60px;
+}
+footer h1{
+	font-size: 1.5em;
+}
+footer img{
+	width: 3%;
+	height: 3%;
+	vertical-align: middle;
+	margin-right: 20px;
+}
+.image-box{
+	width: 20%;
+	height: 300px;
+	float: left;
+	padding: 60px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	text-align: center;
+}
+.image-box img{
+	width: 70%;
+	height: 70%;
+	padding-bottom: 0px;
+	
+}
+.ux .image-box{
+	width: 30%;
+	height: 300px;
+	padding: 30px;
+}
+/*Container Styling Ends here*/
