@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <!--Style Sheet linked-->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!--Header Coding start from here, I have created heading of the portfolio in h1 tag and then I have created navigation menu by using nav tag and anchor tag inside it.-->
+    <header>
+        <h1>Cathy Xu</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a class="active" href="videos.html">Videos</a>
+            <a href="ui.html">Design</a>
+            <a href="programming.html">Programming</a>
+        </nav>
+    </header>
+    <!-- Header tag end here-->
+    <!-- Container coding start from here, I have created all other sections inside it
+        1-Intro
+		2-Skills
+        3-Footer
+        -->
+    <div id="container">
+        <section id="skills" style="min-height:550px; overflow:hidden;">
+            <h1>Videos</h1>
+            <div class="images ux">
+                <div class="image-box">
+                    <a href="https://vimeo.com/239385478"><img src="img/ux/Video1.png" class="hover"></a>
+                    <span>Donut Trip</span>
+                </div>
+                <div class="image-box">
+                    <a href="https://vimeo.com/236359472"><img src="img/ux/Video2.png" class="hover"></a>
+                    <span>Fear</span>
+                </div>
+            </div>
+        </section>
+        <hr class="hr-style">
+        <!--Footer Section Start from here that contains my contact info-->
+        <footer>
+            <h1>Contact Me</h1>
+            <p><img src="img/icons/email.png"> Email: cathyxxw0717@gmail.com</p>
+        </footer>
+        <!--Footer Section End here-->
+    </div>
+    <!--Container Section End here-->
+</body>
+
+</html>
