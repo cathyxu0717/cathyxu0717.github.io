@@ -12,18 +12,19 @@
 
 
 
+
+
 /*Header Styling Starts from here*/
 
 header {
     margin-bottom: 10px;
     padding-top: 20px;
     padding-bottom: 20px;
-    border-bottom: 2px solid #254e7b;
     position: fixed;
     width: 100%;
     top: 0px;
     overflow: hidden;
-    background-color: #85c1e5;
+    background-color: #E3F6FC;
     color: #254e7b;
 }
 
@@ -51,12 +52,14 @@ h1 {
 
 footer p {
     font-family: 'Amita', cursive;
-    font-size: 28px;
+    font-size: 25px;
 }
 
 span {
     font-family: 'Amita', cursive;
 }
+
+
 
 
 
@@ -87,6 +90,8 @@ nav .active {
     background-color: #254e7b;
     color: white;
 }
+
+
 
 
 
@@ -165,4 +170,67 @@ footer img {
     padding: 30px;
 }
 
+
+
 /*Container Styling Ends here*/
+
+
+/*Enlarge Image*/
+
+#myImg {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#myImg:hover {
+    opacity: 0.7;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 10%;
+    max-width: 300px;
+}
+
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}

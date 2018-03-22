@@ -23,7 +23,7 @@
     <!-- Header tag end here-->
     <!-- Container coding start from here, I have created all other sections inside it
         1-Intro
-		2-Skills
+        2-Skills
         3-Footer
         -->
     <div id="container">
@@ -31,7 +31,12 @@
             <h1>Designs</h1>
             <div class="images">
                 <div class="image-box">
-                    <img src="img/ui/UI-1.png">
+                    <img id="myImg" src="img/ui/UI-1.png" alt="IDM POSTER">
+                    <div id="myModal" class="modal">
+                        <span class="close">&times;</span>
+                        <img class="modal-content" id="img01">
+                        <div id="caption"></div>
+                    </div>
                     <span>IDM POSTER</span>
                 </div>
                 <div class="image-box">
@@ -42,14 +47,6 @@
                     <img src="img/ui/UI-3.png">
                     <span>IDM POSTER</span>
                 </div>
-                <!-- <div class="image-box">
-						<img src="img/ui/UI-4.png">
-						<span>IDM POSTER</span>
-					</div>
-					<div class="image-box">
-						<img src="img/ui/UI-5.png">
-						<span>Some text</span>
-					</div> -->
                 <div class="image-box">
                     <img src="img/ui/UI-6.png">
                     <span>XTOPIA LOGO</span>
@@ -86,5 +83,27 @@
     </div>
     <!--Container Section End here-->
 </body>
+<!--Enlarge the image using Javascript-->
+<script>
+var modal = document.getElementById('myModal');
+
+
+var img = document.getElementById('myImg');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function() {
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+
+
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
+</script>
 
 </html>
