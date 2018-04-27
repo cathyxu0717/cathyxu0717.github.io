@@ -1,236 +1,630 @@
-<link href="https://fonts.googleapis.com/css?family=Amita" rel="stylesheet">body {
-    padding: 0px;
-    margin: 0px;
-    color: #254e7b;
-    font-weight: 400;
-    letter-spacing: 0em;
-    line-height: 1.6em;
-    font-family: 'Orbitrn';
-    background-color: #B2D6E8;
+/*Body and Container Start*/
+body{
+	margin: 0px;
+	font-family: 'Montserrat';
+	font-size: 14px;
 }
-
-
-
-
-
-
-/*Header Styling Starts from here*/
-
-header {
-    margin-bottom: 10px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    position: fixed;
-    width: 100%;
-    top: 0px;
-    overflow: hidden;
-    background-color: #E3F6FC;
-    color: #254e7b;
+.container-fluid{
+	padding: 0px;
 }
-
-h1 {
-    display: inline-block;
-    margin: 0px;
-    margin-left: 5%;
+.btn:focus,.btn:active {
+   outline: none !important;
+   box-shadow: none;
 }
+/*Body and Container End*/
 
-.intro,
-.p {
-    text-align: center;
+/*Navigation bar Start*/
+.navbar-default{
+	background-color: white;
+	border: none;
+	font-weight: 900;
 }
-
-.hr-style {
-    width: 80%;
-    border: 0;
-    height: 1px;
-    background-image: -webkit-linear-gradient(left, #f0f0f0, #254e7b, #f0f0f0);
-    background-image: -moz-linear-gradient(left, #f0f0f0, #254e7b, #f0f0f0);
-    background-image: -ms-linear-gradient(left, #f0f0f0, #254e7b, #f0f0f0);
-    background-image: -o-linear-gradient(left, #f0f0f0, #254e7b, #f0f0f0);
-    margin-bottom: 20px;
+.navbar{
+	border-radius: 0px;
+	min-height: 65px;
+	padding-left: 60px;
+	padding-right: 100px;
+	margin-bottom: 0px;
 }
-
-footer p {
-    font-family: 'Amita', cursive;
-    font-size: 25px;
+.navbar-default .navbar-brand p{
+	margin-top: 10px;
+	margin-left: 60px;
+	color: black;	
 }
-
-span {
-    font-family: 'Amita', cursive;
+.navbar-default .navbar-nav > li > a
+{
+	padding-top: 25px;
+	color: black;
+	border-bottom: 2px solid white;
 }
-
-
-
-
-
-
-/*Navigation Coding starts from here*/
-
-nav {
-    /*border: 2px solid black;*/
-    width: 25%;
-    padding: 10px;
-    float: right;
-    margin-right: 8%;
-    display: inline-block;
-    font-size: 20px;
+.navbar-default .navbar-nav > li > a:hover,.navbar-default .navbar-nav > li > a:focus{
+	border-bottom: 2px solid black;
 }
-
-nav a {
-    padding: 5px;
-    text-decoration: none;
-    color: #254e7b;
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus
+{
+	color: black;
+	background-color: white;
+	border-bottom: 2px solid black;
 }
-
-nav a:hover {
-    color: white;
+.navbar-default .navbar-nav > li > .btn{
+	margin-top: 15px;
+	margin-left: 10px;
+	border: 2px solid black;
+	border-radius: 20px;
+	background-color: white;
+	color: black;
+	padding: 5px 25px;
 }
-
-nav .active {
-    background-color: #254e7b;
-    color: white;
+.navbar-toggle{
+	margin-top: 16px;
 }
+/*Navigation bar End*/
 
-
-
-
-
-
-/*Navigation coding Ends here*/
-
-
-/*Header Styling Ends here*/
-
-
-/*Container Styling Starts from here*/
-
-#container {
-    width: 80%;
-    margin: auto;
-    margin-top: 100px;
+/*Intro Section Start*/
+#intro{
+	background-color: #c3dbe5;
+	padding: 60px 80px;
+	overflow: hidden;
 }
-
-#intro,
-#skills,
-footer {
-    text-align: center;
-    font-size: 25px;
+#intro #image img{ 
+	float: right;
+	border: 1px solid gray;
 }
-
-#intro p {
-    text-align: justify;
-    font-family: 'Amita', cursive;
-    font-size: 28px;
+#intro #intro-data{
+	padding-top: 100px;
+	color: white;
 }
-
-#container #intro {
-    background: url(https://st.depositphotos.com/1011596/4441/i/950/depositphotos_44417611-stock-photo-blue-marble-texture-light-pattern.jpg) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+#intro #intro-data p{
+	font-size: 25px;
+	margin: 0px;
+	font-weight: 900;
 }
-
-.images img {
-    width: 15%;
-    height: 15%;
-    padding: 60px;
+#intro #intro-data h1{
+	font-size: 45px;
+	margin-top: 0px;
+	font-weight: 900;
 }
-
-footer h1 {
-    font-size: 1.5em;
+#intro #intro-data a img{
+	margin-top: 30px;
 }
-
-footer img {
-    width: 3%;
-    height: 3%;
-    vertical-align: middle;
-    margin-right: 20px;
+#intro #intro-data #buttons{
+	margin-top: 60px;
 }
-
-.image-box {
-    width: 20%;
-    height: 300px;
-    float: left;
-    padding: 60px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    text-align: center;
+#intro #intro-data #buttons button
+{
+	border:1px;
+	border-radius: 25px;
+	padding: 13px 30px;
+	margin-right: 10px;
+	color: white;
+	background-color: #2b2a2c;
 }
-
-.image-box img {
-    width: 70%;
-    height: 70%;
-    padding-bottom: 0px;
+#intro #intro-data #buttons #resume-button
+{
+	color: black;
+	background-color: white;
 }
-
-.ux .image-box {
-    width: 30%;
-    height: 300px;
-    padding: 30px;
+#intro #image{
+	overflow: hidden;
 }
-
-
-
-/*Container Styling Ends here*/
-
-
-/*Enlarge Image*/
-
-#myImg {
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 0.3s;
+#intro #image{
+	height: 500px;
+	width: 500px;
 }
+/*Intro Section End*/
 
-#myImg:hover {
-    opacity: 0.7;
+/*Projects Section Start*/
+#projects{
+	background-color: #fff4a5;
+	color: black;
+	padding: 2% 10% 5%;
+	font-weight:900;
 }
+#projects a{
+	color: #000000;
+	text-decoration: none;
+}
+#projects .row .project{
+	border:1px solid #eadf97;
+	border-radius: 5px;
+	overflow: hidden;
+	margin-top: 40px;
+}
+#projects .row .project img{
+	width: 100%;
+	height: 350px;
+}
+#projects .row .project .title{
+	background-color: white;
+	padding: 5% 5% 2% 5%;
+}
+#projects .row .project .title p{
+	margin: 0px;
+}
+#projects .row .project .title p span{
+	float: right;
+}
+/*Projects Secion End*/
 
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    padding-top: 100px;
+/*About Section Start*/
+#about{
+	background-color: #a1ced7;
+	padding: 6% 25%;
+	color: white;
+}
+#about h1{
+	font-size: 60px;
+	margin-top: 10px;
+}
+#about p{
+	font-size: 16px;
+	text-align: justify;
+	line-height: 1.7;
+}
+#about #buttons button,#about #buttons .btn
+{
+	border:1px;
+	border-radius: 25px;
+	padding: 1.5% 7%;
+	margin-right: 2%;
+}
+#about #buttons .btn
+{
+	color: white;
+	background-color: #2b2a2c;
+	text-decoration: none;
+}
+#about #buttons #resume-button-2
+{
+	color: black;
+	background-color: white;
+}
+/*About Section End*/
+
+/*Skills Section Start*/
+#skills{
+	background-color: #feb6ae;
+	padding: 4% 15%;
+	color: white;
+	text-align: center;
+}
+#skills .row .skill{
+	border:1px solid #feb6ae;
+	border-radius: 10px;
+	overflow: hidden;
+}
+#skills .row .skill .title{
+	margin-top: 7%;
+}
+/*Skills Section End*/
+
+/*Footer Section Start*/
+#footer{
+	background-color: #2b2a2c;
+}
+#footer .navbar{
+	min-height: 30px;
+}
+#footer .navbar-default{
+	background-color: #2b2a2c;
+}
+#footer .navbar-default .navbar-nav > li > a{
+	color: #878788;
+	border-bottom: none;
+	padding-top: 15px;
+	padding-bottom: 7px;
+	text-decoration: none;
+}
+#footer .navbar-default .navbar-nav > li > a:hover{
+	color: white;
+}
+#footer .navbar-default .navbar-nav > .active > a, #footer .navbar-default .navbar-nav > .active > a:hover, #footer .navbar-default .navbar-nav > .active > a:focus
+{
+	background-color: #2b2a2c;
+	color: white;
+}
+#footer .navbar-default .navbar-nav > li > .btn
+{
+	background-color: #2b2a2c;
+	color: #878788;
+	border: 1px solid #878788;
+	margin-top: 10px;
+	padding: 2px 15px;
+	border-radius: 0px;
+}
+#footer #copyright{
+	float:left;
+	color: #878788;
+	padding-top: 15px;
+}
+/*Footer Section End*/
+
+/*Popups Common Start*/
+/*Popup overlay, on which popup window will appear*/
+.modal-overlay{
+	display: none; 
+    position: fixed; 
+    z-index: 1; 
+    padding-top: 100px; 
     left: 0;
     top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.9);
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+	overflow: auto;
+}
+.modal-content .close, .modal-content-2 .close, .modal-content-3 .close {
+  	position: absolute;
+  	top: 20px;
+  	right: 30px;
+  	font-size: 30px;
+  	font-weight: bold;
+  	text-decoration: none;
+  	color: #333;
+}
+.modal-content .close:hover, .modal-content-2 .close:hover,.modal-content-3 .close:hover {
+  	color: black;
 }
 
+/*Popup Common End*/
+
+/*Hire Me Popup Start*/
 .modal-content {
-    margin: auto;
-    display: block;
-    width: 10%;
-    max-width: 300px;
+  	margin: 30px auto;
+  	padding: 20px;
+  	background-color: #bbe8e1;
+	color: #2b2a2c;
+  	width: 50%;
+  	position: relative;
+	overflow: auto;
+	border-radius: 0px;
+}
+#modal-hire-me{
+	z-index: 2;
+}
+.modal-content form{
+	width: 50%;
+	margin: 10px auto;
+}
+.modal-content form .btn-default{
+	border: 1px solid #2b2a2c;
+	border-radius: 20px;
+	color: white;
+	background-color: #2b2a2c;
+	padding: 10px 45px;
+}
+.modal-content form #request, .modal-content form #email{
+	background-color: #bbe8e1;
+	border-radius: 20px;
+	border-color: #989595;
+}
+/*Hire Me POPup End*/
+
+/*Resume Popup Start*/
+.modal-content-2 {
+  	margin: 20px auto;
+  	padding: 20px;
+  	background-color: #bbe8e1;
+	color: #2b2a2c;
+  	width: 60%;
+  	position: relative;
+	overflow: auto;
+}
+.modal-content-2 button, .modal-content-2 .btn{
+	background-color: #bbe8e1;
+	border: 1px solid #6a696b;
+	border-radius: 20px;
+	font-size: 12px;
+}
+.modal-content-2 .buttons{
+	margin-top: 40px;
+}
+.modal-content-2 #exp-edu{
+	margin-top: 40px;
+	width: 100%;
+}
+.modal-content-2 #exp{
+	vertical-align: text-top;
+}
+.modal-content-2 #edu{
+	border-left: 1px solid #6a696b;
+}
+.modal-content-2 h4, .modal-content-2 h5{
+	font-weight:bolder;
+}
+.modal-content-2 h5{
+	margin-bottom: 0px;
+}
+.modal-content-2 p{
+	font-size: 12px;
+	color: #6a696b;
+	padding: 0px;
+	margin: 0px;
+}
+.modal-content-2 .year{
+	font-size: 13px;
+	text-decoration: underline;
+	color: black;
+}
+.modal-content-2 .content2 #exp .place{
+	margin-bottom: 10px;
+	color: black;
+}
+.modal-content-2 .experience{
+	margin-top: 30px;
+}
+.modal-content-2 .education{
+	margin-top: 10px;
+	margin-bottom: 30px;
+}
+.modal-content-2 .first{
+	margin-top: 30px;
+	margin-bottom: 10px;
+}
+.modal-content-2 .education .degree{
+	color: black;
+}
+..modal-content-2 .skills{
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+.modal-content-2 .skills table{
+	width: 60%;
+}
+.modal-content-2 .skills table tr .skill{
+	width: 30%;
+}
+.modal-content-2 .skills table tr .progress{
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.modal-content-2 .skills table tr .progress,.modal-content-2 .skills table tr .progress-bar{
+	height: 7px;
+	border-radius: 0px;	
+}
+.modal-content-2 .skills table tr .progress-bar{
+	background-color: #6a696b;
+}
+.modal-content-2 .awards{
+	margin: 30px 0px;
+}
+.modal-content-2 .awards table{
+	width: 60%;
+}
+.modal-content-2 .awards table tr td{
+	padding-bottom: 20px;
+}
+.modal-content-2 .awards table tr .year-td{
+	width: 17%;
+}
+.modal-content-2 .awards table td{
+	vertical-align: text-top;
+}
+.modal-content-2 .awards table tr .place{
+	color: black;
+	padding-bottom: 10px;
+}
+.modal-content-2 #hire-me-btn{
+	border:1px;
+	border-radius: 25px;
+	padding: 1.5% 5%;
+	color: white;
+	background-color: #2b2a2c;
+	margin-bottom: 30px;
+}
+/*Resume Popup End*/
+
+/*Porject Popup Start*/
+.modal-content-3{
+	margin: 10px auto;
+  	padding: 0px;
+  	background-color: #ffffff;
+	color: #000000;
+  	border-radius: 0px;
+  	width: 80%;
+  	position: relative;
+	overflow: auto;
+}
+.modal-content-3 #poster-view-1, .modal-content-3 #poster-view-2, .modal-content-3 #poster-view-3, .modal-content-3 #project-view-1, .modal-content-3 #project-view-2, .modal-content-3 #project-view-3, .modal-content-3 #poster-content, .modal-content-3 #project-content{
+	display: none;
+}
+.modal-content-3 h2{
+	margin-top: 70px;
+	font-weight: 900;
+}
+.modal-content-3 p{
+	font-size: 16px;
+	margin-top: 30px;
+	margin-right: 50px;
+	text-align: justify;
+}
+.modal-content-3 .close {
+	position: initial;
+	margin-right: 20px;
+	margin-top: 10px;
+}
+/*Porject Popup End*/
+
+
+/*Media Queries for Responsievness of Some Elements*/
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+	#intro #image{
+		height: 400px;
+		width: 400px;
+	}
+	#projects .row .project img{
+		height: 300px;
+	}
+	.modal-content{
+		width: 70%;
+	}
+	.modal-content-2{
+		width: 80%;
+		padding: 10px;
+	}
 }
 
-#caption {
-    margin: auto;
-    display: block;
-    width: 80%;
-    max-width: 700px;
-    text-align: center;
-    color: #ccc;
-    padding: 10px 0;
-    height: 150px;
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+	.navbar{
+		padding-right: 50px;
+	}
+	#intro{
+		padding: 30px 40px;
+	}
+	#intro #intro-data {
+		padding-top: 50px;
+	}
+	#intro #intro-data{
+		float: left;
+	}
+	#intro #image{
+		height: 350px;
+		width: 320px;
+		float: right;
+	}
+	#projects .row .project img{
+		height: 300px;
+	}
 }
 
-.close {
-    position: absolute;
-    top: 15px;
-    right: 35px;
-    color: #f1f1f1;
-    font-size: 40px;
-    font-weight: bold;
-    transition: 0.3s;
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+	#intro {
+		padding: 30px 20px 20px 20px;
+	}
+	#intro #image{
+		height: 300px;
+		width: 50%;
+	}
+	#intro #intro-data{
+		padding-top: 30px;
+	}
+	#intro #intro-data h1{
+		font-size: 30px;
+	}
+	#intro #intro-data p{
+		font-size: 18px;
+	}
+	#intro #intro-data a img{
+		margin-top: 10px;
+	}
+	#intro #intro-data #buttons{
+		margin-top: 20px;
+	}
+	#intro #intro-data #buttons button
+	{
+		border:1px;
+		border-radius: 19px;
+		padding: 5px 8px;
+		font-size: 10px;
+	}
+	#about h1
+	{
+		font-size: 40px;
+	}
+	#about #buttons button, #about #buttons .button {
+		padding: 1% 5%;
+		margin-right: 2%;
+		margin-bottom: 10px;
+	}
+	#projects .row .project img{
+		height: 200px;
+	}
+	#footer .navbar{
+		padding: 2px 20px;
+	}
+	#footer .navbar ul{
+		float: right;
+		margin-right: 10px;
+	}
+	#footer .navbar ul li{
+		list-style: none;
+		float: left;
+	}
+	#footer .navbar p{
+		margin-left: 10px;
+	}
+	.modal-content{
+		width: 70%;
+	}
+	.modal-content-2 .awards table{
+		width: 90%;
+	}
+	.modal-content-2 .skills table{
+		width: 80%;
+	}
 }
 
-.close:hover,
-.close:focus {
-    color: #bbb;
-    text-decoration: none;
-    cursor: pointer;
+/* Extra Small Devices, Phones */ 
+@media only screen and (max-width : 480px) {
+	.modal-content-2 .awards table{
+		width: 100%;
+	}
+	.modal-content-2 .skills table{
+		width: 100%;
+	}
 }
+
+/*Print Page Styling and Setting Start*/
+@page {
+	size: auto;
+    /* this affects the margin in the printer settings */ 
+    margin: 10mm 0mm;  
+}
+@media print {
+	body{
+		font-size: 14pt; 
+	}
+	.modal-content-2 p{
+		font-size: 14pt;
+	}
+	.modal-content-2 .year{
+		font-size: 14pt;
+	}
+  	#modal-resume {
+    	display: block; 
+    	padding-top: 100px; 
+    	width: 100%; 
+    	height: 100%; 
+		margin: 0px;
+	}
+	.modal-content-2 {
+  		padding: 20px;
+		color: #2b2a2c;
+  		border-radius: 5px;
+  		width: 100%;
+	}
+	.modal-content-2 button, .modal-content-2 .btn,.modal-content-2 .close-2 {
+		display: none;
+	}
+	.modal-content-2 h5{
+		margin-bottom: 0px;
+	}
+		.progress {
+		position: relative;
+	}
+	.progress:before {
+		display: block;
+		content: '';
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		z-index: 0;
+		border-bottom: 2rem solid #eeeeee;
+	}
+	.progress-bar {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		z-index: 1;
+		border-bottom: 2rem solid #6a696b;;
+	}
+}
+/*Print Page Styling and Setting End*/

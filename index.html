@@ -3,57 +3,323 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Personal Portfolio</title>
-		<!--Style Sheet linked-->
-		<link href="css/style.css" rel="stylesheet">
+
+		<title>Cathy Xu Portfolio</title>
+		
+		<!--CSS Files Start-->
+		<link rel="stylesheet" href="css/bootstrap.css">
+		<link rel="stylesheet" href="css/style.css">
+		<!--CSS Files End-->
+		
+		<!--Montserrat Font Google Api Start-->
+		<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+		<!--Montserrat Font Google Api End-->
+		
+		<!--Javascript Files Start-->
+		<!--Bootstrap JS requires jquery Library-->
+		<script src="js/jquery-3.2.1.js"></script>
+		<script src="js/bootstrap.js"></script>
+		<script src="js/script.js"></script>
+		<!--Javascript File End-->
+		
 	</head>
 	<body>
-		<!--Header Coding start from here, I have created heading of the portfolio in h1 tag and then I have created navigation menu by using nav tag and anchor tag inside it.-->
-		<header>
-			<h1>Cathy Xu</h1>
-			<nav>
-				<a class="active" href="index.html">Home</a>
-				<a href="videos.html">Videos</a>
-				<a href="ui.html">Design</a>
-				<a href="programming.html">Programming</a>
-			</nav>
-		</header>
-		<!-- Header tag end here-->
-		
-		<!-- Container coding start from here, I have created all other sections inside it
-        1-Intro
-		2-Skills
-        3-Footer
-        -->
-		<div id="container">
-			<!--My introduction section Start from here-->
-		    <section id="intro">
-				<h1>About Myself</h1>
-				<p>Hi, My name is Cathy Xu. I am from Shanghai, China and is a current undergraduate student in NYU, studying Integrated Digital Media. I am going to graduate in 2021. </p>
-				<p>Through my courses, I learn UX disciplines, UI designs, Programming and more. This website showcases some of my works.</p>
-		    </section>
-			<!--My Introduction End here-->
-			<hr class="hr-style">
-			<!--My Skills Section start from here, I have specified my Skills here by the use of images.-->
-			<section id="skills">
-				<h1>My Skills Set</h1>
-				<div class="images">
-					<img src="img/skills/SKILL1.png">
-					<img src="img/skills/SKILL2.png">
-					<img src="img/skills/SKILL3.png">
-					<img src="img/skills/SKILL4.png">
-					<img src="img/skills/SKILL5.png">
-					<img src="img/skills/SKILL6.png">
+		<!--Main Container Start-->
+		<div class="container-fluid">
+			
+			<!-- Main Menu Start-->
+			<nav class="navbar navbar-default" role="navigation">
+				<div class="navbar-header">
+					<!--This button will appear on small devices as dropdown menu button.-->
+					<button type="btn" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+
+					</button>
+					<a class="navbar-brand" href="#"><img class="img-circle" width="40px" height="40px" src="img/headshot.jpg" style="float:left;"><p>Cathy Xu</p></a>
 				</div>
-			</section>
-			<!--My Skills section End here-->
-			<hr class="hr-style">
-			<!--Footer Section Start from here that contains my contact info-->
-			<footer>
-				<h1>Contact Me</h1>
-				<p><img src="img/icons/email.png"> Email: cathyxxw0717@gmail.com</p>
-			</footer>
-			<!--Footer Section End here-->
+				<div class="collapse navbar-collapse" id="navbar-collapse">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="#projects">WORK</a></li>
+						<li><a href="#about">CONTACT</a></li>
+						<li><button class="btn" id="hire-me-btn" onclick="hire_me_popup();">HIRE ME</button></li>
+					</ul>
+				</div>
+			</nav>
+			<!-- Main Menu End-->
+			
+			<!-- Introduction Section Start-->
+			<div id="intro">
+				<div class="row">
+					<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" id="intro-data">
+						<p>Hello, I'm</p>
+						<h1>Cathy Xu</h1>
+						<a href="https://www.linkedin.com/in/cathy-xinwen-xu-676a2b160/" target="_blank"><img src="img/icon/LinkedIn-Logo-500x500.png" width="30px" height="30px"></a>
+						<div id="buttons">
+							<button class="btn" id="hire-me-button-2" onclick="hire_me_popup();">HIRE ME</button>
+							<button class="btn" id="resume-button" onclick="resume_popup();">SEE MY RESUME</button>
+						</div>
+					</div>
+					<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" id="image"><img src="img/headshot.jpg" class="img-responsive"></div>
+				</div>
+			</div>
+			<!-- Introduction Section End-->
+			
+			<!-- Projects Section Start-->
+			<div id="projects">
+				<div class="row">
+					<div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
+						<a onclick="project_popup('modal-project','poster-view-1','poster-content');"><div class="project">
+						<img src="img/POSTER1.png">
+						<div class="title"><p>IDM POSTER<span>2017</span></p></div>
+						</div></a>
+					</div>
+					<div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
+						<a onclick="project_popup('modal-project','poster-view-2','poster-content');"><div class="project">
+						<img src="img/POSTER2.png">
+						<div class="title"><p>IDM POSTER<span>2017</span></p></div></div></a>
+					</div>
+					<div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
+						<a onclick="project_popup('modal-project','poster-view-3','poster-content');"><div class="project">
+						<img src="img/POSTER3.png">
+						<div class="title"><p>IDM POSTER<span>2017</span></p></div></div></a>
+					</div>
+					<div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
+						<a onclick="project_popup('modal-project','project-view-1','project-content');"><div class="project">
+						<img src="img/PROJECT1.png">
+						<div class="title"><p>XTOPIA LOGO<span>2017</span></p></div></div></a>
+					</div>
+					<div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
+						<a onclick="project_popup('modal-project','project-view-2','project-content');"><div class="project">
+						<img src="img/PROJECT2.png">
+						<div class="title"><p>XTOPIA LOGO<span>2017</span></p></div></div></a>
+					</div>
+					<div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
+						<a  onclick="project_popup('modal-project','project-view-3','project-content');"><div class="project">
+						<img src="img/PROJECT3.png">
+						<div class="title"><p>XTOPIA LOGO<span>2017</span></p></div></div></a>
+					</div>
+				</div>
+			</div>
+			<!-- Projects Section End-->
+			
+			<!-- About Section Start-->
+			<div id="about">
+				<div class="row">
+					<div class="col-lg-12 col-md-12">
+						<h3>ABOUT ME</h3>
+						<h1>WHO AM I</h1>
+						<p>Hi, My name is Cathy Xu. I am a Freshman Student at New York University. I am currently pursuing a Bachelor's of Science in Integrated Digital Media with a minor in Game Design. I am interested in UI/UX,Game Design and 3D Modeling.</p>
+						<div id="buttons">
+							<button class="btn" id="hire-me-button-3" onclick="hire_me_popup();">HIRE ME</button>
+							<button class="btn" id="resume-button-2" onclick="resume_popup();">SEE MY RESUME</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- About Section End-->
+			
+			<!-- Skills Section Start-->
+			<div id="skills">
+				<div class="row">
+					<h1>MY SKILLS</h1>
+					<div class="col-lg-4 col-md-4">
+						<div class="skill">
+							<img src="img/skills1.jpg" height="200px" width="320px">
+							<div class="title">
+								<p>Adobe Suites</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-4">
+						<div class="skill">
+							<img src="img/skills2.png" height="200px" width="320px">
+							<div class="title">
+								<p>User Experience</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-4">
+						<div class="skill">
+							<img src="img/skills3.png" height="200px" width="320px">
+							<div class="title">
+							<p>Front End Development</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Skills Section End-->
+			
+			<!--Footer Section Start-->
+			<div id="footer">
+				<nav class="navbar navbar-default" role="navigation">
+					<p id="copyright">
+						&copy; 2018 Copyright Cathy Xu
+					</p>
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="#projects">Work</a></li>
+						<li><a href="#about">Contact</a></li>
+						<li><button class="btn" id="hire-me-btn-4" onclick="hire_me_popup();">HIRE ME</button></li>
+					</ul>
+			</nav>
+			</div>
+			<!--Footer Section End-->
+			
+			<!--Hire Me Popup Start-->
+			<div id="modal-hire-me" class="modal-overlay">
+				<div class="modal-content">
+					<span class="close close-1">&times;</span>
+					<h1 class="text-center">LET'S TALK</h1>
+					<p class="text-center">CALL ME OR SEND ME A REQUEST</p>
+					<p class="text-center"><img src="img/icon/phone.png" width="20px" height="20px">&nbsp;&nbsp;&nbsp;(347) 522 1764</p>
+					<p class="text-center"><img src="img/icon/email.png" width="20px" height="20px">&nbsp;&nbsp;&nbsp;xx706@nyu.edu</p>
+					<form role="form">
+						<div class="form-group">
+							<label for="email">Address e-mail</label>
+							<input type="email" class="form-control" id="email" placeholder="Address e-mail">
+						</div>
+						<div class="form-group">
+							<label for="request">Request</label>
+							<textarea class="form-control" id="request" placeholder="Type your request" cols="45" rows="8"></textarea>
+						</div>
+						<div class="text-center">
+							<button type="submit" class="btn btn-default">SEND</button>
+						</div>
+					</form>
+				</div>
+			</div>
+			<!--Hire Me Popup End-->
+			
+			<!--Resume Popup Start-->
+			<div id="modal-resume" class="modal-overlay">
+				<div class="modal-content-2">
+					<span class="close close-2">&times;</span>
+					<h1 class="text-center">RESUME</h1>
+					<div class="row buttons">
+						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-right">
+							<a href="resume/Resume.pdf" class="btn btn-default" target="_blank">DOWNLOAD PDF</a>
+						</div>
+						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+							<button type="submit" class="btn btn-default" onclick="print_resume('modal-resume')">PRINT</button>
+						</div>
+					</div>
+					<table class="row" id="exp-edu">
+						<tr>
+							<td class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-right" id="exp">
+								<h4>EXPERIENCE</h4>
+								<div class="experience">
+									<p class="year">JUN 2017-AUG 2017</p>
+									<h5>Graphic Design Assistant</h5>
+									<p class="place"><i>Baosteel Group Co.</i></p>
+									<p>Shanghai City,China</p>
+									<p>Shadowed Graphic Designer</p>
+								</div>
+								<div class="experience">
+									<p class="year">MAY 2017-JUN 2017</p>
+									<h5>Admissions Assistant</h5>
+									<p class="place"><i>The Pennington School</i></p>
+									<p>Pennington, New Jersey</p>
+									<p>High School Internship Program working as Admission Assistant</p>
+								</div>
+								<div class="experience">
+									<p class="year">SEP 2016-JUN 2017</p>
+									<h5>STUDENT Ambassador</h5>
+									<p class="place"><i>The Pennington School</i></p>
+									<p>Pennington, New Jersey</p>
+								</div>
+							</td>
+							<td class="col-lg-6 col-md-6 col-sm-6 col-xs-6" id="edu">
+								<h4>EDUCATION</h4>
+								<div class="education first">
+									<p class="year">2017-2021</p>
+									<h5>New York University</h5>
+									<p class="degree">Bachelor of Science-BS</p>
+									<p class="degree">Integrated Digital Media</p>
+								</div>
+								<div class="education">
+									<p class="year">2013-2017</p>
+									<h5>The Pennington School</h5>
+									<p class="degree">High School</p>
+								</div>
+								<h4>SKILLS</h4>
+								<div class="skills">
+									<table style="width"100%;>
+									<tr>
+										<td class="skill"><p>English</p></td>
+										<td><div class="progress"><div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width:80%;"></div></div></td>
+									</tr>
+									<tr>
+										<td class="skill"><p>Chinese</p></td>
+										<td><div class="progress"><div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width:90%;"></div></div></td>
+									</tr>
+									<tr>
+										<td class="skill"><p>Photoshop</p></td>
+										<td><div class="progress"><div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width:80%;"></div></div></td>
+									</tr>
+									<tr>
+										<td class="skill"><p>UX</p></td>
+										<td><div class="progress"><div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%;"></div></div></td>
+									</tr>
+									</table>
+								</div>
+								<h4>Awards</h4>
+								<div class="awards">
+									<table>
+									<tr>
+										<td class="year-td"><p class="year">2018</p></td>
+										<td><h5>The Josh Goldfaden Award</h5>
+											<p class="place"><i>NYU Expository Writing Program</i></p>
+											<p>Students who have made exceptional contributions to the class as a community of readers and writers and honor them formally</p></td>
+									</tr>
+									<tr>
+										<td class="year-td"><p class="year">2016</p></td>
+										<td><h5>The Cum Laude Society</h5>
+											<p class="place"><i>The Pennington School</i></p>
+										</td>
+									</tr>
+								</table>
+							</div>
+							
+							</td>
+						</tr>
+					 </table>
+					<div class="text-center buttons">
+						<button class="btn btn-default" id="hire-me-btn-5" onclick="hire_me_popup();">HIRE ME</button>
+					</div>
+				    </div>
+			</div>
+			<!--Resume Me Popup End-->
+			
+			<!--Project View Popup Start-->
+			<div id="modal-project" class="modal-overlay">
+				<div class="modal-content-3">
+					<span class="close close-3">&times;</span>
+					<div class="row">
+						<div class="col-lg-8 col-md-8 col-sm-8 project-view" id="poster-view-1"><img src="img/POSTER1.png" class="img-responsive" width="100%" height="100%"></div>
+						<div class="col-lg-8 col-md-8 col-sm-8 project-view" id="poster-view-2" ><img src="img/POSTER2.png" class="img-responsive" width="100%" height="100%"></div>
+						<div class="col-lg-8 col-md-8 col-sm-8 project-view" id="poster-view-3"><img src="img/POSTER3.png" class="img-responsive" width="100%" height="100%"></div>
+						<div class="col-lg-8 col-md-8 col-sm-8 project-view" id="project-view-1"><img src="img/PROJECT1.png" class="img-responsive" width="100%" height="100%"></div>
+						<div class="col-lg-8 col-md-8 col-sm-8 project-view" id="project-view-2"><img src="img/PROJECT2.png" class="img-responsive" width="100%" height="100%"></div>
+						<div class="col-lg-8 col-md-8 col-sm-8 project-view" id="project-view-3"><img src="img/PROJECT3.png"  class="img-responsive" width="100%" height="100%"></div>
+						<div class="col-lg-4 col-md-4 col-sm-4" id="poster-content">
+							<h2>1&lt;3 IDM</h2>
+							<h4>2017</h4>
+							<p>I designed this Poster for my Ideation and Prototyping class. I used Photoshop to design the Posters.I learned Photoshop throughout the process by myself.</p>
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-4" id="project-content">
+							<h2>XTOPIA LOGO</h2>
+							<h4>2018</h4>
+							<p>I designed this Logo for my Visual Foundation Class. I come up with this imaginery company that dedicated to smarthome app.I used Illustrator and Photoshop.</p>
+						</div>
+					</div>
+				 </div>
+			</div>
+			<!--Resume Me Popup End-->
+			
 		</div>
+		<!--Main Container End-->
 	</body>
 </html>
